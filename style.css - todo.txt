@@ -1,0 +1,270 @@
+/* General */
+* {
+    margin: 100;
+    padding: 100;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+  }
+  
+  /* Todo App */
+  .todo-app {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  .btn {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.large-btn {
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Close Task Form Button */
+  .close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-task-form-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Task Form */
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .task-form-label {
+    font-weight: 600;
+    color: #4b4b4b;
+  }
+  
+  .form-control {
+    padding: 10px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .task-form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Image Input */
+  .task-form #image-input {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Tasks Container */
+  .task {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task strong {
+    color: #007aff;
+  }
+
+.task p {
+  margin: 5px 0;
+}
+
+.task button {
+  background-color: #34c759;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-right: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.task button:hover {
+  background-color: #28a745;
+}
+
+/* Delete Button */
+.task button:last-child {
+  background-color: #ff3b30;
+}
+
+.task button:last-child:hover {
+  background-color: #c12720;
+}
+
+/* Task Image */
+.task-image {
+  max-width: 50%;
+  height: auto;
+  margin-top: 10px;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Confirmation Dialog */
+dialog {
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-close-dialog-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.discard-message-text {
+  font-size: 16px;
+}
+
+.confirm-close-dialog-btn-container button {
+  width: 48%;
+}
+
+#historic-date-warning-dialog {
+  border: 2px solid #f44336;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 300px;
+  text-align: center;
+}
+
+.warning-message-text {
+  color: #f44336;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.warning-dialog-btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.warning-dialog-btn-container .btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.warning-dialog-btn-container .btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Dialog styling */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+dialog p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+dialog button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+dialog button#confirm-title-btn,
+dialog button#add-description-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+dialog button#proceed-without-description-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+dialog button:hover {
+  opacity: 0.8;
+}
+
+/* Specific styles for warning dialogs */
+#empty-title-warning-dialog, #empty-description-warning-dialog {
+  font-family: Arial, sans-serif;
+}
+
+dialog button.btn {
+  margin: 10px;
+}
